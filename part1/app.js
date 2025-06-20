@@ -191,8 +191,11 @@ app.get('/api/walkers/summary', async function (req, res)) {
                 ROUND(AVG(r.rating), 1) AS average_rating,
                 (
                 SELECT COUNT(*)
-                FROM
-                )
+                FROM WalkRequests wr
+                JOIN WalkApplications wa ON wr.request_id = wa.request_id
+                WHERE wa.walker_id = u.user_id AND wr.status = 'completed'
+                ) AS compelted_walks
+                
         `);
     }
 }
