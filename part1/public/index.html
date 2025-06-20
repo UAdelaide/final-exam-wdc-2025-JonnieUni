@@ -1,75 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🐶 DOG OF THE DAY 🐶</title>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <style>
-    body {
-      background-color: hotpink;
-      font-family: 'Comic Sans MS', cursive;
-      font-size: 18px;
-      color: yellow;
-      animation: flash 0.2s infinite alternate;
-    }
-    @keyframes flash {
-      from { background-color: hotpink; }
-      to { background-color: orange; }
-    }
-
-    .dog-box {
-      margin: 20px;
-      border: 10px dashed green;
-      padding: 50px;
-      text-align: center;
-      transform: rotate(3deg);
-    }
-
-    .tiny-button {
-      font-size: 8px;
-      padding: 2px 4px;
-      cursor: crosshair;
-    }
-
-    img {
-      width: 600px;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-  </style>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
-  <div id="app">
-    <div class="dog-box">
-      <h1>DOG 🐕 OF THE 🌟 DAY</h1>
-      <img :src="dogImage" alt="">
-      <p><strong>Name:</strong> Woofers the III</p>
-      <p><strong>Breed:</strong> Unknown but majestic</p>
-      <button class="tiny-button" @click="getDog">🔁 refresh dog</button>
-    </div>
-  </div>
-
-  <script>
-    const { createApp } = Vue;
-
-    createApp({
-      data() {
-        return {
-          dogImage: ''
-        };
-      },
-      mounted() {
-        this.getDog();
-      },
-      methods: {
-        async getDog() {
-          const res = await fetch('https://dog.ceo/api/breeds/image/random');
-          const data = await res.json();
-          this.dogImage = data.message;
-        }
-      }
-    }).mount('#app');
-  </script>
+    <h1>Express</h1>
+    <p>Welcome to Express</p>
 </body>
 </html>
