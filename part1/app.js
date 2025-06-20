@@ -148,9 +148,9 @@ let db;
 
 app.get('/api/dogs', async function (req, res) {
     try {
-        var[rows] = await db.query(
+        var[rows] = await db.query(`
             
-        )
+        `);
     }
 })
 
