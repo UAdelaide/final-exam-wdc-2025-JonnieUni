@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog of the Day</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: cursive;
+      color: #999999;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 40px;
+      border: 1px solid #ddd;
+    }
+
+    .dog-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .dog-image {
+      width: 700px;
+      height: 500px;
+      object-fit: contain;
+    }
+
+    .refresh {
+      font-size: 9px;
+      background: none;
+      color: grey;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    /* Weird scroll and layout effects */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .dog-details {
+      line-height: 3;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h2><marquee behavior="alternate">Dog of the Day</marquee></h2>
+
+      <div class="dog-info">
+        <img class="dog-image" :src="dogImage" alt="">
+        <div class="dog-details">
+          <div>Name: Sir Bark-a-lot</div>
+          <div>Breed: Noble Mystery</div>
+          <div>Rating: 🐾🐾🐾🐾🐾</div>
+        </div>
+      </div>
+
+      <button class="refresh" @click="getDog">Click here to see another maybe</button>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          dogImage: ''
+        };
+      },
+      mounted() {
+        this.getDog();
+      },
+      methods: {
+        async getDog() {
+          const res = await fetch('https://dog.ceo/api/breeds/image/random');
+          const data = await res.json();
+          this.dogImage = data.message;
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
