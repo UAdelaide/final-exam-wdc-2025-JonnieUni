@@ -121,8 +121,8 @@ let db;
                 VALUES
                 ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
                 ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
-                ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Rocky', 'large'),
-                ((SELECT user_id FROM Users WHERE username = 'davidsmith'), 'Luna', 'medium'),
+                ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Rocky', 'large'),
+                ((SELECT user_id FROM Users WHERE username = 'jon123'), 'Luna', 'medium'),
                 ((SELECT user_id FROM Users WHERE username = 'jon123'), 'Coco', 'small');
             `);
 
