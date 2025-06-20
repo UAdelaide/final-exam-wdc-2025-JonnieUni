@@ -23,8 +23,12 @@ let db;
 (async function () {
     try{
         var connection = await mysql.createConnection({
-            host:'localhost'
-        })
+            host:'localhost',
+            user: 'root',
+            password: ''
+        });
+
+    
     }
 })
 
