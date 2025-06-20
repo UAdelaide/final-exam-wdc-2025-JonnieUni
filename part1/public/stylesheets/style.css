@@ -20,5 +20,10 @@ header {
 }
 
 .dog-section {
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff8dc;
+  border: 3px dashed #000;
+  width: 90%
   
 }
