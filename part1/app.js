@@ -137,7 +137,7 @@ let db;
             `);
 
             await db.query(`
-                INSERT INTO WalkRatings()
+                INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
             `);
         }
     } catch (err) {
