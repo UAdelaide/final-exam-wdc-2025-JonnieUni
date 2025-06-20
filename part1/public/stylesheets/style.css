@@ -6,6 +6,9 @@ body {
   animation: backgroundFlash 5s infinite;
 }
 
+@keyframes backgroundFlash {
+  0% { background-image: ;}
+}
 
 a {
   color: #00B7FF;
