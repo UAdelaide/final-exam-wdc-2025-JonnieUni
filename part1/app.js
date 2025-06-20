@@ -128,13 +128,13 @@ let db;
             `);
 
             await db.query(`
-                INSERT INTO Dogs (owner_id, name, size)
+                INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
                 VALUES
-                ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
-                ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
-                ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 'Rocky', 'large'),
-                ((SELECT user_id FROM Users WHERE username = 'davidsmith'), 'Luna', 'medium'),
-                ((SELECT user_id FROM Users WHERE username = 'jon123'), 'Coco', 'small');
+                ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Rocky'), '2025-06-11 07:00:00', 60, 'City Trail', 'open'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Luna'), '2025-06-11 10:00:00', 20, 'Riverside Park', 'completed'),
+                ((SELECT dog_id FROM Dogs WHERE name = 'Coco'), '2025-06-12 09:00:00', 40, 'Hillside Path', 'cancelled');
             `);
         }
     }
