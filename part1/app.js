@@ -18,8 +18,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-var db;
+let db;
 
-(async function)
+(async function () {
+    try{
+        
+    }
+})
 
 module.exports = app;
