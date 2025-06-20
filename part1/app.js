@@ -200,7 +200,7 @@ app.get('/api/walkers/summary', async function (req, res)) {
             WHERE u.role = 'walker'
             GROUP BY u.username
         `);
-        res.json(rows);
+        res.json(rows);re
     }
 }
 
