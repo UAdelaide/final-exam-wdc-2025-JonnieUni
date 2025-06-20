@@ -153,6 +153,7 @@ app.get('/api/dogs', async function (req, res) {
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
+        res.json(rows)
     }
 })
 
