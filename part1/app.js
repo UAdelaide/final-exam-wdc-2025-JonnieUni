@@ -25,7 +25,7 @@ let db;
         var connection = await mysql.createConnection({
             host:'localhost',
             user: 'root',
-            password: 'password'
+            password: ''
         });
 
         await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
@@ -35,7 +35,7 @@ let db;
         db = await mysql.createConnection({
             host: 'localhost',
             user: 'root'
-            password: 'password',
+            password: '',
             database: DogWalkService
         });
 
