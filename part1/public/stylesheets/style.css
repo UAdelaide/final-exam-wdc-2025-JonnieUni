@@ -38,4 +38,9 @@ header {
 
 .fake-form {
   background-color: #e0ffff;
+  padding: 15px;
+  margin: 20px;
+  border: 2px dotted #008b8b
 }
+
+
