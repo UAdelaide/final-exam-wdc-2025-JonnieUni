@@ -155,8 +155,10 @@ app.get('/api/dogs', async function (req, res) {
         `);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({ error: 'Failed to fetch dogs', details: err.message })
+        res.status(500).json({ error: 'Failed to fetch dogs', details: err.message });
     }
-})
+});
+
+// G
 
 module.exports = app;
