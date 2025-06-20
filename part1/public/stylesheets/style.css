@@ -3,7 +3,9 @@ body {
   background: linear-gradient(45deg, #ffde59, #ff914d);
   color: #000;
   padding: 20px;
+  animation: backgroundFlash 5s infinite;
 }
+
 
 a {
   color: #00B7FF;
