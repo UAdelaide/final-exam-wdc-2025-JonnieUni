@@ -78,3 +78,7 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name = 'Luna'), '2025-06-11 10:00:00', 20, 'Riverside Park', 'completed'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Coco'), '2025-06-12 09:00:00', 40, 'Hillside Path', 'cancelled');
 
+INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
+VALUES
+(1, (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 5),
+(2, (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'carol123'), 4)
