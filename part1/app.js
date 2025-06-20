@@ -104,6 +104,9 @@ let db;
         )
         `);
 
+        // Inserting data onily if Users table is empty
+        
+
     }
 })
 
