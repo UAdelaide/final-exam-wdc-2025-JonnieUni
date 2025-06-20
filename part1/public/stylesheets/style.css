@@ -24,6 +24,11 @@ header {
   padding: 20px;
   background-color: #fff8dc;
   border: 3px dashed #000;
-  width: 90%
-  
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.dog-image {
+  max-width: 100
 }
