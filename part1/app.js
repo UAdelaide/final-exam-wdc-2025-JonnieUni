@@ -185,7 +185,9 @@ app.get('/api/walkrequests/open', async function (req, res) {
 app.get('/api/walkers/summary', async function (req, res)) {
     try {
         var [rows] = await db.query(`
-            
+            SELECT
+                u.username AS walker_username,
+                COUNT(r.rating_id)
         `);
     }
 }
