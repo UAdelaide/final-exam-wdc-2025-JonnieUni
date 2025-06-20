@@ -181,5 +181,7 @@ app.get('/api/walkrequests/open', async function (req, res) {
     }
 });
 
+// GET /api/walkers/summary
+app.get('')
 
 module.exports = app;
