@@ -143,4 +143,9 @@ let db;
 
 })();
 
+// ROUTES
+// GET /api/dogs
+
+
+
 module.exports = app;
