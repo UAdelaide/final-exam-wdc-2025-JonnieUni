@@ -146,6 +146,12 @@ let db;
 // ROUTES
 // GET /api/dogs
 
-app.get('/api/dogs', async function (req, res))
+app.get('/api/dogs', async function (req, res) {
+    try {
+        var[rows] = await db.query(
+            
+        )
+    }
+})
 
 module.exports = app;
