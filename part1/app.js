@@ -137,6 +137,7 @@ let db;
                 ((SELECT dog_id FROM Dogs WHERE name = 'Coco'), '2025-06-12 09:00:00', 40, 'Hillside Path', 'cancelled');
             `);
         }
+        
     }
 })
 
