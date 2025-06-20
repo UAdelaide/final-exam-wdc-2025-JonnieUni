@@ -13,7 +13,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -205,5 +204,8 @@ app.get('/api/walkers/summary', async function (req, res) {
         res.status(500).json({ error: 'Failed to fetch walker summary', details: err.message });
     }
 });
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 module.exports = app;
