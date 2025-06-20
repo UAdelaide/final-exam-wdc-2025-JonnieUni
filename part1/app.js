@@ -159,6 +159,8 @@ app.get('/api/dogs', async function (req, res) {
     }
 });
 
-// G
+// GET /api/walkrequests/open
+app.get('/api/walkrequests/open', async function (req, res) {
+
 
 module.exports = app;
