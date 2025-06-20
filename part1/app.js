@@ -34,7 +34,7 @@ let db;
         // Connecting to the DogWalkService Database
         db = await mysql.createConnection({
             host: 'localhost',
-            user: 'root'
+            user: 'root',
             password: '',
             database: DogWalkService
         });
