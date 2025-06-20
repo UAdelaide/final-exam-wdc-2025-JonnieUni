@@ -11,3 +11,9 @@ body {
   50% { background-image: #ff914d; }
   100% { background-image: #ffde59; }
 }
+
+header {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+}
