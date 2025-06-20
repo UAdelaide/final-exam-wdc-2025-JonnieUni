@@ -182,7 +182,7 @@ app.get('/api/walkrequests/open', async function (req, res) {
 });
 
 // GET /api/walkers/summary
-app.get('/api/walkers/summary', async function (req, res)) {
+app.get('/api/walkers/summary', async function (req, res) {
     try {
         var [rows] = await db.query(`
             SELECT
@@ -204,6 +204,6 @@ app.get('/api/walkers/summary', async function (req, res)) {
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch walker summary', details: err.message });
     }
-}
+});
 
 module.exports = app;
