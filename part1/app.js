@@ -163,7 +163,9 @@ app.get('/api/dogs', async function (req, res) {
 app.get('/api/walkrequests/open', async function (req, res) {
     try {
         var [rows] = await db.query(`
-
+            SELECT
+                WalkRequest.request_id,
+                Dogs.name AS dog_name,
         `);
         res.json(rows);
     } catch (err) {
