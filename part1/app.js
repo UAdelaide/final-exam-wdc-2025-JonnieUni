@@ -23,7 +23,7 @@ let db;
     try{
         // Creating a database if it does not exist
         var connection = await mysql.createConnection({
-            host:'localhost',
+            host: 'localhost',
             user: 'root',
             password: ''
         });
