@@ -60,8 +60,11 @@
               console.error("Failed to fetch dog image", error);
             }
           }
+        },
+        mounted() {
+          this.fetchDog();
         }
-      })
+      }).mount("")
     </script>
 
 </body>
