@@ -43,4 +43,11 @@ header {
   border: 2px dotted #008b8b
 }
 
+.fake-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
 
+.fake-form input, .fake-form select {
+  
+}
