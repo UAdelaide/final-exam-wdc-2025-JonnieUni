@@ -39,7 +39,7 @@ let db;
         });
 
         await db.execute('
-            CREATE TABLE Users (
+            CREATE TABLE Users (`
             user_id INT AUTO_INCREMENT PRIMARY KEY,
             username VARCHAR(50) UNIQUE NOT NULL,
             email VARCHAR(100) UNIQUE NOT NULL,
@@ -47,7 +47,7 @@ let db;
             role ENUM('owner', 'walker') NOT NULL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
-        );
+        `);
 
     }
 })
