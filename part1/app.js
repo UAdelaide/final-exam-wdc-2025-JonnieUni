@@ -29,7 +29,7 @@ let db;
         });
 
         await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
-        await connection.end()
+        await connection.end();
     }
 })
 
