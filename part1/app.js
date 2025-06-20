@@ -140,7 +140,7 @@ let db;
         console.error('Error setting up database', err);
     }
 
-})();
+}());
 
 // ROUTES
 // GET /api/dogs
