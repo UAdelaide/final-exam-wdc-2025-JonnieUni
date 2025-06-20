@@ -36,7 +36,7 @@ let db;
             host: 'localhost',
             user: 'root',
             password: '',
-            database: DogWalkService
+            database: 'DogWalkService'
         });
 
         // Create tables if they don't exist
