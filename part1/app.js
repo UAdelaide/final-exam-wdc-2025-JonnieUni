@@ -146,6 +146,6 @@ let db;
 // ROUTES
 // GET /api/dogs
 
-
+app.get('/api/dogs', async function (req, res))
 
 module.exports = app;
