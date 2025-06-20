@@ -53,3 +53,9 @@ header {
   padding: 8px;
   margin-bottom: 10px;
 }
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 50px;
+}
