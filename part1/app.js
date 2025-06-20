@@ -108,7 +108,7 @@ let db;
         var [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
         if (userRows[0].count === 0) {
             await db.query(`
-
+                INSERT INTO Users ()
             `);
         }
     }
