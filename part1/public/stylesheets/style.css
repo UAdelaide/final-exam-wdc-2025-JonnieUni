@@ -8,5 +8,6 @@ body {
 
 @keyframes backgroundFlash {
   0% { background-image: #ffde59; }
-  color: #00B7FF;
+  50% { background-image: #ff914d; }
+  100% { background-image: #ffde59; }
 }
