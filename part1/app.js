@@ -162,9 +162,10 @@ app.get('/api/dogs', async function (req, res) {
 // GET /api/walkrequests/open
 app.get('/api/walkrequests/open', async function (req, res) {
     try {
-        var [rows] = await db.query(
-            
-        )
+        var [rows] = await db.query(`
+
+        `);
+        res.json(rows);
     }
 
 
