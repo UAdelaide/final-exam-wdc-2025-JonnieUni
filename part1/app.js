@@ -105,7 +105,7 @@ let db;
         `);
 
         // Inserting data onily if Users table is empty
-        
+        var [userRows] = await db.execute('SELECT COUNT(*) AS count FROM Users')
 
     }
 })
