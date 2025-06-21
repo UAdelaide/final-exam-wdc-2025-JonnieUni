@@ -1,3 +1,6 @@
+const express = require('express');
+const router = express.Router();
+const db = require('../models/db');
 
 // a GET /api/dogs to list all dogs with owner info
 router.get('/dogs', async (req, res) => {
