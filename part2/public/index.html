@@ -42,7 +42,11 @@
         };
       },
       methods: {
-        
+        async login() {
+          try {
+            const response = await fetch('/api/users/login')
+          }
+        }
       }
     }).mount('#app');
   </script>
