@@ -83,12 +83,12 @@ router.get('/my-dogs', async (req, res) => {
 router.get('/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
-      SELECT 
+      SELECT D
     `);
     res.json(rows);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs', details: err.message });
   }
-})
+});
 
 module.exports = router;
