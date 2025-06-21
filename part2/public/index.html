@@ -42,7 +42,9 @@
       </tr>
     </thread>
     <tbody>
-      <tr v-for
+      <tr v-for="dog in dogs" :key="dog.dog_name">
+        <td style="width: 100px;"></td>
+      </tr>
     </tbody>
   </table>
 </div>
