@@ -6,7 +6,11 @@ require('dotenv').config();
 const app = express();
 
 // added this below
-app.use(session())
+app.use(session({
+    secret: 'dog-walk-secret',
+    resave: false,
+    saveUninitialized
+}))
 
 // Middleware
 app.use(express.json());
