@@ -126,7 +126,7 @@
             await fetch('/api/users/logout', { method: 'POST' });
             window.location.href = '/index.html';
           } catch (err) {
-            alert('Logout failed')
+            alert('Logout failed');
           }
         }
 
@@ -140,6 +140,7 @@
           message,
           error,
           submitWalkRequest
+          logout // added so you
         };
       }
     }).mount('#app');
