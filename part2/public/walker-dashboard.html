@@ -48,6 +48,10 @@
         const error = ref('');
         const walkerId = ref(null); // stores current walker ID
 
+        async function getCurrentUser() {
+          
+        }
+
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
