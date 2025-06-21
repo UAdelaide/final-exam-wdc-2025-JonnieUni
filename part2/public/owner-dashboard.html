@@ -107,7 +107,8 @@
         // load dogs owned by current user
         async function loadMyDogs() {
           try {
-            const res = await fetch('/api/walks');
+            const res = await fetch('/api/walks/my-dogs');
+            if (!res.ok) throw new Error('Failed to load you dogs')
             walks.value = await res.json();
           } catch (err) {
             error.value = 'Failed to load walk requests';
