@@ -59,8 +59,10 @@
               if (data.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
               } else if (data.role === 'walker') {
-                window.location.href = '/walker-dashboard.html'
+                window.location.href = '/walker-dashboard.html';
               }
+            } else {
+              this.errorMessage = data.message || 'Invalid login';
             }
           }
         }
