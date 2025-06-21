@@ -52,7 +52,8 @@
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error('Failed to fetch user info');
-            const user = await res.json()
+            const user = await res.json();
+            walkerId.value = user.user_id;
           }
         }
 
