@@ -33,14 +33,14 @@
 <h2 class="text-secondary mb-3">All Registered Dogs</h2>
 <div class="table-responsive">
   <table class="table table-bordered align-middle">
-    <thread class="table-light">
+    <thead class="table-light">
       <tr>
         <th>Photo</th>
         <th>Name</th>
         <th>Size</th>
         <th>Owner</th>
       </tr>
-    </thread>
+    </thead>
     <tbody>
       <tr v-for="dog in dogs" :key="dog.dog_name">
         <td style="width: 100px;"><img :src="dog.image" class="img-fluid rounded" alt="Dog photo"></td>
