@@ -64,7 +64,7 @@
             } else {
               this.errorMessage = data.message || 'Invalid login';
             }
-          }
+          } catch (err)
         }
       }
     }).mount('#app');
