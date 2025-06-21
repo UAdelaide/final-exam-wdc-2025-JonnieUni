@@ -48,12 +48,15 @@
         const error = ref('');
         const walkerId = ref(null); // stores current walker ID
 
+        // Fetch current user info
         async function getCurrentUser() {
           try {
             const res = await fetch('/api/users/me');
             if (!res.ok) throw new Error('Failed to fetch user info');
             const user = await res.json();
             walkerId.value = user.user_id;
+          } catch (err) {
+            error.value = err.message;
           }
         }
 
