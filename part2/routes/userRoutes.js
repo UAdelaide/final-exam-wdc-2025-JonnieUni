@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
 
     const user = rows[0];
-    req.session.user = user;
+    req.session.user = user; // store logged-in user info in the session
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
