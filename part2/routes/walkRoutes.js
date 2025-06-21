@@ -82,9 +82,9 @@ router.get('/my-dogs', async (req, res) => {
 // a GET /api/dogs to list all dogs with owner info
 router.get('/dogs', async (req, res) => {
   try {
-    const [rows] = await db.query(
-
-    );
+    const [rows] = await db.query(`
+      SELECT 
+    `);
     res.json(rows);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs', details: err.message });
