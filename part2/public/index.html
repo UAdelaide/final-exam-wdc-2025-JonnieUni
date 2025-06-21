@@ -99,7 +99,7 @@
         // fetches random dog images from the part 1 api
         async loadDogs() {
           try {
-            const res = await fetch('/api/dogs');
+            const res = await fetch('/api/walks/dogs');
             const dogs = await res.json();
 
             // for each dog, get a random image
