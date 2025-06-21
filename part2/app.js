@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const dogRoutes = require()
+const dogRoutes = require('./routes/dogRoutes'); // imported route file
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
