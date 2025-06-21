@@ -80,6 +80,12 @@ router.get('/my-dogs', async (req, res) => {
 });
 
 // a GET /api/dogs to list all dogs with owner info
-router.get('/dogs', async (req, res))
+router.get('/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.query(
+      
+    )
+  }
+})
 
 module.exports = router;
