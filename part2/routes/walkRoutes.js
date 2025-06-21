@@ -59,6 +59,8 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
+
+// Route to get dogs belonging to the logged-in owner
 router.get('/my-dogs', async (req, res) => {
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
