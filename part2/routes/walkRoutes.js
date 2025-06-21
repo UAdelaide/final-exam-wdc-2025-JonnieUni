@@ -59,6 +59,10 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-router.get('/my-dogs', async (req, res) => )
+router.get('/my-dogs', async (req, res) => {
+  if (!req.session.user) {
+    return res.status(401)
+  }
+})
 
 module.exports = router;
