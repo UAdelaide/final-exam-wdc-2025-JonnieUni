@@ -105,6 +105,10 @@
               const imgData = await imgRes.json();
               dog.image = imgData.message;
             }
+
+            this.dogs = dogs;
+          } catch (err) {
+            console.error('Failed to load dogs:', err);
           }
         }
       }
