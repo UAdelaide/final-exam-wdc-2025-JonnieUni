@@ -58,4 +58,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// POST logout route - destroys the session and clears cookie
+
 module.exports = router;
