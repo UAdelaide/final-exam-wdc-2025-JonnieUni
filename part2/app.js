@@ -6,7 +6,8 @@ require('dotenv').config();
 
 const app = express();
 
-// added this below
+// Added this below
+// Enables session handling for all incoming requests
 app.use(session({
     secret: 'dog-walk-secret',
     resave: false,
