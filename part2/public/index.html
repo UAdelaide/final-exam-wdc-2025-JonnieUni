@@ -96,11 +96,13 @@
         },
 
         // fetches /api/dogs
+        // fetches random dog images
         async loadDogs() {
           try {
             const res = await fetch('/api/dogs');
             const dogs = await res.json();
 
+            // for each dog, get a random image
             for (let dog of dogs) {
               const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
               const imgData = await imgRes.json();
