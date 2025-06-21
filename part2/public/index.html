@@ -111,6 +111,9 @@
             console.error('Failed to load dogs:', err);
           }
         }
+      },
+      mounted() {
+        this.loadDogs();
       }
     }).mount('#app');
   </script>
