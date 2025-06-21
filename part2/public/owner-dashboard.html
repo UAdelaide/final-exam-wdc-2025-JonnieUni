@@ -104,6 +104,16 @@
           }
         }
 
+        // load dogs owned by current user
+        async function loadMyDogs() {
+          try {
+            const res = await fetch('/api/walks');
+            walks.value = await res.json();
+          } catch (err) {
+            error.value = 'Failed to load walk requests';
+          }
+        }
+
         async function submitWalkRequest() {
           try {
             const res = await fetch('/api/walks', {
