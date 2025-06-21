@@ -83,8 +83,11 @@ router.get('/my-dogs', async (req, res) => {
 router.get('/dogs', async (req, res) => {
   try {
     const [rows] = await db.query(
-      
-    )
+
+    );
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json()
   }
 })
 
