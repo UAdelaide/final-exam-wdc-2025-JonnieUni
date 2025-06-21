@@ -9,8 +9,9 @@ const app = express();
 app.use(session({
     secret: 'dog-walk-secret',
     resave: false,
-    saveUninitialized
-}))
+    saveUninitialized: false,
+    cookie: { secure: false }
+}));
 
 // Middleware
 app.use(express.json());
