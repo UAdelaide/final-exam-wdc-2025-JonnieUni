@@ -73,8 +73,8 @@ router.get('/my-dogs', async (req, res) => {
     );
     res.json(rows);
   } catch (err) {
-    res.status(500)
+    res.status(500).json({ error: 'Failed to fetch your dogs' });
   }
-})
+});
 
 module.exports = router;
